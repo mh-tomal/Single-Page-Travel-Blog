@@ -1,4 +1,4 @@
-import logo from "../asserts/images/logo.png";
+import logo from "../assets/images/logo.png";
 import classes from "../styles/Nav.module.css";
 import Account from "./Account";
 export default function Nav() {
@@ -6,9 +6,9 @@ export default function Nav() {
     <nav className={classes.nav}>
       <ul>
         <li>
-          <a href="index.html" className={classes.band}>
-            <img href={logo} alt="Quiz?" />
-            <h3>Quiz?</h3>
+          <a href="index.html" className={classes.brand}>
+            <img src={logo} alt="Quiz?" />
+            <h3>Learn The React</h3>
           </a>
         </li>
       </ul>
