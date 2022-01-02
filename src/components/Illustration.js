@@ -1,9 +1,9 @@
 import classes from "../styles/Illustration.module.css";
 
-export default function Illustration({ image }) {
+export default function Illustration(props) {
   return (
     <div className={classes.illustration}>
-      <img src={image} alt="Singup" />
+      <img src={props.src} alt="Singup" />
     </div>
   );
 }

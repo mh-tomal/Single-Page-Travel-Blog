@@ -1,4 +1,4 @@
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/logo_new.png";
 import classes from "../styles/Nav.module.css";
 import Account from "./Account";
 export default function Nav() {

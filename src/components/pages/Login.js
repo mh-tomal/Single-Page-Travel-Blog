@@ -10,7 +10,7 @@ export default function Login() {
     <>
       <h1>Login to your account</h1>
       <div className="column">
-        <Illustration scr={Image} />
+        <Illustration src={Image} />
         <Form className={`${classes.login}`}>
           <TextInput
             type="text"
