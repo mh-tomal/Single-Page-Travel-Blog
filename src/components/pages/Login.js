@@ -21,7 +21,7 @@ export default function Login() {
           <TextInput type="password" placeholder="Enter password" icon="lock" />
           <Button> Submit now </Button>
           <div class="info">
-            Don't have an account? <Link to="signup.html">Signup</Link> instead.
+            Don't have an account? <Link to="signup">Signup</Link> instead.
           </div>
         </Form>
       </div>

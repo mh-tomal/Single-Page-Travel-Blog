@@ -7,7 +7,7 @@ export default function Account() {
       <span className="material-icons-outlined" title="Account">
         account_circle
       </span>
-      <Link to="singup">Signup</Link>
+      <Link to="signup">Signup</Link>
       <Link to="login">Login</Link>
     </div>
   );
