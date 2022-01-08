@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import validator from "validator";
 import { useAuth } from "../contexts/AuthContext";
 import Button from "./Button";
 import Checkbox from "./Checkbox";
@@ -24,6 +25,12 @@ export default function SignupForm() {
     // do validation
     if (password !== confirmPassword) {
       return setError("Passwords don't match!");
+    }
+    if (password.length < 4) {
+      return setError("Password is too short");
+    }
+    if (!validator.isEmail(email)) {
+      return setError("Enter valid Email!");
     }
 
     try {
@@ -78,7 +85,7 @@ export default function SignupForm() {
 
       <Checkbox
         required
-        text="I agree to the Terms &amp; Conditions"
+        text=" I agree to the Terms &amp; Conditions"
         value={agree}
         onChange={(e) => setAgree(e.target.value)}
       />
