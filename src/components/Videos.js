@@ -9,26 +9,6 @@ export default function Videos() {
         {" "}
         <Video />
       </Link>
-      <Link to="quiz">
-        {" "}
-        <Video />
-      </Link>
-      <Link to="quiz">
-        {" "}
-        <Video />
-      </Link>
-      <Link to="quiz">
-        {" "}
-        <Video />
-      </Link>
-      <Link to="quiz">
-        {" "}
-        <Video />
-      </Link>
-      <Link to="quiz">
-        {" "}
-        <Video />
-      </Link>
     </div>
   );
 }
