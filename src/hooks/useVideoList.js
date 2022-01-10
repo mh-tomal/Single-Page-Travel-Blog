@@ -9,26 +9,28 @@ import {
 } from "firebase/database";
 import { useEffect, useState } from "react";
 
-export default function useVideolist(page) {
+export default function useVideoList(page) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [videos, setVideos] = useState([]);
-  const [hasMore, setHasmore] = useState(true);
+  const [hasMore, setHasMore] = useState(true);
 
   useEffect(() => {
     async function fetchVideos() {
+      // database related works
       const db = getDatabase();
       const videosRef = ref(db, "videos");
       const videoQuery = query(
         videosRef,
         orderByKey(),
         startAt("" + page),
-        limitToFirst(8)
+        limitToFirst(12)
       );
 
       try {
         setError(false);
         setLoading(true);
+        // request firebase database
         const snapshot = await get(videoQuery);
         setLoading(false);
         if (snapshot.exists()) {
@@ -36,7 +38,7 @@ export default function useVideolist(page) {
             return [...prevVideos, ...Object.values(snapshot.val())];
           });
         } else {
-          setHasmore(false);
+          setHasMore(false);
         }
       } catch (err) {
         console.log(err);
@@ -47,6 +49,7 @@ export default function useVideolist(page) {
 
     fetchVideos();
   }, [page]);
+
   return {
     loading,
     error,
