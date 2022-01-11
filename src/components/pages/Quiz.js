@@ -80,12 +80,7 @@ export default function Quiz() {
       [id]: qna,
     });
 
-    navigate.push({
-      pathname: `/result/${id}`,
-      state: {
-        qna,
-      },
-    });
+    navigate(`/result/${id}`, { state: { qna } });
   }
 
   // calculate percentage of progress
