@@ -80,7 +80,7 @@ export default function Quiz() {
       [id]: qna,
     });
 
-    navigate(`/result/${id}`, { state: { qna } });
+    navigate(`/result/${id}`, { state: qna });
   }
 
   // calculate percentage of progress
@@ -98,6 +98,7 @@ export default function Quiz() {
           <Answers
             options={qna[currentQuestion].options}
             handleChange={handleAnswerChange}
+            input={true}
           />
           <ProgressBar
             next={nextQuestion}
