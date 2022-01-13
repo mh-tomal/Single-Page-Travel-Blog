@@ -87,6 +87,8 @@ export default function Quiz() {
   const percentage =
     questions.length > 0 ? ((currentQuestion + 1) / questions.length) * 100 : 0;
 
+  //console.log(questions);
+
   return (
     <>
       {loading && <div>Loading ...</div>}

@@ -9,7 +9,7 @@ export default function Result() {
   const location = useLocation();
   const { state } = location;
   const { loading, error, answers } = useAnswers(id);
-  console.log(answers);
+  //console.log(answers);
 
   function calculate() {
     let score = 0;
@@ -29,6 +29,8 @@ export default function Result() {
       if (_.isEqual(correctIndexes, checkedIndexes)) {
         score = score + 5;
       }
+      //console.log(checkedIndexes);
+      //console.log(correctIndexes);
     });
 
     return score;
